@@ -39,7 +39,6 @@ app.MapGet("vedur/station/{id}", async (string id) =>
 
         var responseBody = await response.Content.ReadAsStringAsync();
 
-
         var station = helpers.ParseWeatherXML(responseBody);
 
         if(station == null){

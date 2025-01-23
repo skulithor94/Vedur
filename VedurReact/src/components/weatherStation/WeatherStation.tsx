@@ -79,7 +79,6 @@ export const WeatherStation = () => {
         setCurrentStation(undefined)
     }
 
-
     return (
         <>
             <div>
