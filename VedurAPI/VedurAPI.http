@@ -1,0 +1,6 @@
+@VedurAPI_HostAddress = http://localhost:5068
+
+GET {{VedurAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,2 +1,2 @@
 # Vedur
-    Vedur API for InfoMentor
+    Vedur API for InfoMentornpx
