@@ -40,7 +40,7 @@ app.MapGet("vedur/station/{id}", async (string id) =>
         var responseBody = await response.Content.ReadAsStringAsync();
 
 
-        var station = helpers.ParseXML(responseBody);
+        var station = helpers.ParseWeatherXML(responseBody);
 
         if(station == null){
             return Results.NotFound($"The station with id: {id} was not found, please try another");

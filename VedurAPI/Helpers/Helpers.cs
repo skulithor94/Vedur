@@ -2,9 +2,14 @@ using System.Xml.Linq;
 
 class Helpers
 {
-    public Station? ParseXML(string response)
+   /// <summary>
+   /// Function that parses xml weather forecast data and returns a more readble object
+   /// </summary>
+   /// <param name="response">A valid response from a XML weather service</param>
+   /// <returns>A station object with enclosed forecasts</returns>
+   /// <exception cref="InvalidOperationException">Throws an exception if the data is not valid</exception>
+    public Station? ParseWeatherXML(string response)
     {
-
         var xml = XDocument.Parse(response);
 
         // Convert XML to Station to improve readability for the frontend
