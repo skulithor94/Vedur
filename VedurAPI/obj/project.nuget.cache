@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "nifMwRd7JfY=",
+  "dgSpecHash": "7mFy8zWRAsU=",
   "success": true,
   "projectFilePath": "/Users/skulithorarnason/Vedur/VedurAPI/VedurAPI.csproj",
   "expectedPackageFiles": [
     "/Users/skulithorarnason/.nuget/packages/microsoft.aspnetcore.openapi/9.0.1/microsoft.aspnetcore.openapi.9.0.1.nupkg.sha512",
-    "/Users/skulithorarnason/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+    "/Users/skulithorarnason/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512",
+    "/Users/skulithorarnason/.nuget/packages/microsoft.netcore.app.runtime.win-x64/9.0.1/microsoft.netcore.app.runtime.win-x64.9.0.1.nupkg.sha512",
+    "/Users/skulithorarnason/.nuget/packages/microsoft.aspnetcore.app.runtime.win-x64/9.0.1/microsoft.aspnetcore.app.runtime.win-x64.9.0.1.nupkg.sha512",
+    "/Users/skulithorarnason/.nuget/packages/microsoft.netcore.app.host.win-x64/9.0.1/microsoft.netcore.app.host.win-x64.9.0.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,6 +1,5 @@
 import './App.css'
-import { WeatherStation } from './components/weatherStation/weatherStation'
-
+import { WeatherStation } from './components/weatherStation/WeatherStation'
 
 function App() {
   return (

@@ -48,7 +48,7 @@ export const WeatherStation = () => {
 
     useEffect(() => {
         async function getData() {
-            const url = `http://localhost:5068/vedur/station/${currentStationId}`;
+            const url = `http://localhost:5000/vedur/station/${currentStationId}`;
             try {
                 setIsLoading(true);
                 const response = await fetch(url);

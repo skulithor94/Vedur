@@ -1,5 +1,10 @@
 var builder = WebApplication.CreateBuilder(args);
-var MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.ListenAnyIP(5000); // HTTP port
+    options.ListenAnyIP(5001, listenOptions => listenOptions.UseHttps()); // HTTPS port
+});
 
 // Add services to the container.
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
@@ -8,13 +13,13 @@ builder.Services.AddOpenApi();
 //Cors added to allow for localhost connection to the React app
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: MyAllowSpecificOrigins,
-                      policy =>
-                      {
-                          policy.WithOrigins("http://localhost:5173");
-                      });
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.AllowAnyOrigin()
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
 });
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -23,7 +28,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-app.UseHttpsRedirection();
+app.UseCors();
 
 Helpers helpers = new Helpers();
 
@@ -55,6 +60,5 @@ app.MapGet("vedur/station/{id}", async (string id) =>
     }
 }).WithName("Vedur");
 
-app.UseCors(MyAllowSpecificOrigins);
 
 app.Run();

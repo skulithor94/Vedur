@@ -18,4 +18,4 @@
     Gott væri að hafa integration test fyrir eina routeið í bakendanum til að sjá betur hvað gerist ef að gögn skila sér ekki.
     Einnig væri gott að bæta við unit test fyrir Helpers.cs
 
-    
+    Bæta við https redirect, hsts og cors policy. Bæta öryggi almennt
