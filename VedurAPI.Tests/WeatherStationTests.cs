@@ -2,11 +2,16 @@
 
 public class WeatherStationTests
 {
+    readonly Helpers helpers;
+
+    public WeatherStationTests()
+    {
+        helpers = new Helpers();
+    }
+
     [Fact]
     public void ParseWeatherXML_Return_Null_When_Empty_String()
     {
-        var helpers = new Helpers();
-
         var returnValue = helpers.ParseWeatherXML("");
 
         Assert.Null(returnValue);
@@ -15,8 +20,6 @@ public class WeatherStationTests
     [Fact]
     public void ParseWeatherXML_Return_Null_When_No_Station_Element()
     {
-        var helpers = new Helpers();
-
         var mockXml = "<forecasts></forecasts>";
 
         var returnValue = helpers.ParseWeatherXML(mockXml);
@@ -27,7 +30,6 @@ public class WeatherStationTests
     [Fact]
     public void ParseWeatherXML_Return_Valid_Object_When_Valid_XML()
     {
-        var helpers = new Helpers();
         var mockXml = @"
         <forecasts>
             <station id='1' valid='1'>

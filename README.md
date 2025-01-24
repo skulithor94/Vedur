@@ -5,6 +5,7 @@
 # Attribution
     Aðstoð við boilerplate kóða gáfu Github Copilot og Microsoft docs. 
     XML parsing kóði og debouce í React var fengið þaðan.
+    Unit test boilerplate hjálp fengin frá Copilot.
 
 # Hugsanlegar betrumbætur
     Það sem betur mætti gera í framtíðinni væri að bæta við bæði betra error handling og sömuleiðis logging svo hægt

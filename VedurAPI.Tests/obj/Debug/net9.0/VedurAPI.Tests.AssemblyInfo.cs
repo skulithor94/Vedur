@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VedurAPI.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea2ad38c80d5a1f77607b1fdb4b33751a8ba1f6c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cece3cf266e8fcbd6a95e4b29ff7a79a725fad6c")]
 [assembly: System.Reflection.AssemblyProductAttribute("VedurAPI.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VedurAPI.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
