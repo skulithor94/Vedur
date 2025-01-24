@@ -3,13 +3,14 @@ using System.Xml.Linq;
 public class Helpers
 {
    /// <summary>
-   /// Function that parses xml weather forecast data and returns a more readble object
+   /// Function that parses xml weather forecast data and returns a more readble object.
    /// </summary>
    /// <param name="response">A valid response from a XML weather service</param>
    /// <returns>A station object with enclosed forecasts</returns>
    /// <exception cref="InvalidOperationException">Throws an exception if the data is not valid</exception>
     public Station? ParseWeatherXML(string response)
     {
+        //We could look into throwing an error here instead of returning a null.
         if(string.IsNullOrEmpty(response)){
             return null;
         }
@@ -24,6 +25,8 @@ public class Helpers
             return null;
         }
 
+        //Turn the XML into a more readable object for the frontend.
+        //This could probably be done better but I'm rusty in XML parsing.
         var station = new Station
         {
             Id = int.Parse(stationElement.Attribute("id")?.Value ?? throw new InvalidOperationException("Missing 'id' attribute.")),
