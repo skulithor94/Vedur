@@ -1,6 +1,6 @@
 using System.Xml.Linq;
 
-class Helpers
+public class Helpers
 {
    /// <summary>
    /// Function that parses xml weather forecast data and returns a more readble object
@@ -10,6 +10,10 @@ class Helpers
    /// <exception cref="InvalidOperationException">Throws an exception if the data is not valid</exception>
     public Station? ParseWeatherXML(string response)
     {
+        if(string.IsNullOrEmpty(response)){
+            return null;
+        }
+
         var xml = XDocument.Parse(response);
 
         // Convert XML to Station to improve readability for the frontend

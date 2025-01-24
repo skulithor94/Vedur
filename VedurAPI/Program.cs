@@ -2,8 +2,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.ListenAnyIP(5000); // HTTP port
-    options.ListenAnyIP(5001, listenOptions => listenOptions.UseHttps()); // HTTPS port
+    options.ListenAnyIP(5000);
+    options.ListenAnyIP(5001, listenOptions => listenOptions.UseHttps());
 });
 
 // Add services to the container.
@@ -20,6 +20,7 @@ builder.Services.AddCors(options =>
                .AllowAnyMethod();
     });
 });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

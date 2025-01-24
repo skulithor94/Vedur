@@ -16,6 +16,6 @@
     vona að hann lendi á réttri stöð
 
     Gott væri að hafa integration test fyrir eina routeið í bakendanum til að sjá betur hvað gerist ef að gögn skila sér ekki.
-    Einnig væri gott að bæta við unit test fyrir Helpers.cs
+    Einnig væri gott að bæta við fleiri unit testum fyrir Helpers.cs þar sem xml parsing getur verið mjög brothætt
 
-    Bæta við https redirect, hsts og cors policy. Bæta öryggi almennt
+    Bæta við https skildu og cors policy. Bæta öryggi almennt

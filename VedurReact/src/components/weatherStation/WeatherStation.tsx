@@ -87,9 +87,7 @@ export const WeatherStation = () => {
                     <input type='number' value={currentStationId} onChange={handleInputChange} />
                 </div>
 
-                {errorMessage && (
-                    <div>{errorMessage}</div>
-                )}
+                {errorMessage && (<div>{errorMessage}</div>)}
                 {isLoading ? <span>Loading</span> : null}
                 {currentStation && !errorMessage && !isLoading && (
                     <>
