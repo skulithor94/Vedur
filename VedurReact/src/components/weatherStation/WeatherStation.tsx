@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./WeatherStation.css";
 import {
+  Button,
   Table,
   TableBody,
   TableCell,
@@ -8,6 +9,7 @@ import {
   TableHead,
   TableRow,
   TextField,
+  Typography,
 } from "@mui/material";
 
 export interface Station {
@@ -93,9 +95,9 @@ export const WeatherStation = () => {
   };
 
   return (
-    <>
-      <div>
-        <div>
+    <div className="container">
+      <div className="header-fixed">
+        <div className="header">
           <TextField
             id="standard-basic"
             label="Please select a weather station"
@@ -106,19 +108,28 @@ export const WeatherStation = () => {
           />
         </div>
 
-        {errorMessage && <div>{errorMessage}</div>}
-        {isLoading ? <span>Loading</span> : null}
+        {errorMessage && (
+          <Typography variant="body1" gutterBottom>
+            {errorMessage}
+          </Typography>
+        )}
+        {isLoading ? (
+          <Typography variant="body1" gutterBottom>
+            Loading
+          </Typography>
+        ) : null}
         {currentStation && !errorMessage && !isLoading && (
-          <>
-            <div>Currently selected weather station:{currentStation.name}</div>
-            <div>
-              <a
+          <div className="data-container">
+            <Typography variant="body1" gutterBottom>
+              Currently selected weather station:{currentStation.name}
+            </Typography>
+              <Button
                 href={currentStation.link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Link to more info
-              </a>
+                See more
+              </Button>
               <TableContainer>
                 <Table sx={{ minWidth: 650 }} aria-label="simple table">
                   <TableHead>
@@ -147,10 +158,9 @@ export const WeatherStation = () => {
                   </TableBody>
                 </Table>
               </TableContainer>
-            </div>
-          </>
+          </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
