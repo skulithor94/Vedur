@@ -153,11 +153,11 @@ export const WeatherStation = () => {
                     });
                     return (
                       <TableRow key={index}>
-                        <TableCell>{forecast.weather}</TableCell>
-                        <TableCell>{formattedDate}</TableCell>
-                        <TableCell>{forecast.windSpeed}</TableCell>
-                        <TableCell>{forecast.windDirection}</TableCell>
-                        <TableCell>{forecast.temperature}</TableCell>
+                        <TableCell align="left">{forecast.weather}</TableCell>
+                        <TableCell align="center">{formattedDate}</TableCell>
+                        <TableCell align="center">{forecast.windSpeed}</TableCell>
+                        <TableCell align="center">{forecast.windDirection}</TableCell>
+                        <TableCell align="center">{forecast.temperature}</TableCell>
                       </TableRow>
                     );
                   })}
