@@ -121,43 +121,49 @@ export const WeatherStation = () => {
         {currentStation && !errorMessage && !isLoading && (
           <div className="data-container">
             <Typography variant="body1" gutterBottom>
-              Currently selected weather station:{currentStation.name}
+              Currently selected weather station: {currentStation.name}
             </Typography>
-              <Button
-                href={currentStation.link}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                See more
-              </Button>
-              <TableContainer>
-                <Table sx={{ minWidth: 650 }} aria-label="simple table">
-                  <TableHead>
-                    <TableRow>
-                      <TableCell>Weather</TableCell>
-                      <TableCell>Time</TableCell>
-                      <TableCell>Wind Speed m/s</TableCell>
-                      <TableCell>Wind direction</TableCell>
-                      <TableCell>Temperature °C</TableCell>
-                    </TableRow>
-                  </TableHead>
-                  <TableBody>
-                    {currentStation.forecasts?.map((forecast, index) => {
-                      return (
-                        <TableRow key={index}>
-                          <TableCell>{forecast.weather}</TableCell>
-                          <TableCell>
-                            {forecast.forecastTime.toLocaleString()}
-                          </TableCell>
-                          <TableCell>{forecast.windSpeed}</TableCell>
-                          <TableCell>{forecast.windDirection}</TableCell>
-                          <TableCell>{forecast.temperature}</TableCell>
-                        </TableRow>
-                      );
-                    })}
-                  </TableBody>
-                </Table>
-              </TableContainer>
+            <Button
+              href={currentStation.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              See more
+            </Button>
+            <TableContainer>
+              <Table sx={{ minWidth: 650 }} aria-label="simple table">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Weather</TableCell>
+                    <TableCell>Time</TableCell>
+                    <TableCell>Wind Speed m/s</TableCell>
+                    <TableCell>Wind direction</TableCell>
+                    <TableCell>Temperature °C</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {currentStation.forecasts?.map((forecast, index) => {
+                    const forecastDate = new Date(forecast.forecastTime);
+                    const formattedDate = forecastDate.toLocaleString("is-IS", {
+                      year: "numeric",
+                      month: "2-digit",
+                      day: "2-digit",
+                      hour: "2-digit",
+                      minute: "2-digit",
+                    });
+                    return (
+                      <TableRow key={index}>
+                        <TableCell>{forecast.weather}</TableCell>
+                        <TableCell>{formattedDate}</TableCell>
+                        <TableCell>{forecast.windSpeed}</TableCell>
+                        <TableCell>{forecast.windDirection}</TableCell>
+                        <TableCell>{forecast.temperature}</TableCell>
+                      </TableRow>
+                    );
+                  })}
+                </TableBody>
+              </Table>
+            </TableContainer>
           </div>
         )}
       </div>

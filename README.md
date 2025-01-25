@@ -10,7 +10,6 @@ og tvísmella á VedurAPI, það ætti að keyra serverinn locally í terminal
 Til að keyra test er `dotnet test` skipunin keyrð.
 
 ### Web frontend
-    
 Fara í VedurReact möppuna og keyra í terminal:
     `npm install`
     `npm run dev`
@@ -19,9 +18,9 @@ Fara á slóðina sem kemur í terminal, getur litið svona út: http://localhos
 
 ## Attribution
 Aðstoð við boilerplate kóða gáfu Github Copilot og Microsoft docs. 
-    XML parsing kóði og debounce í React var fengið þaðan.
-    Unit test boilerplate hjálp fengin frá Copilot.
-    Css frá MaterialUI: https://mui.com/material-ui/getting-started/
+XML parsing kóði og debounce í React var fengið þaðan.
+Unit test boilerplate hjálp fengin frá Copilot.
+Css frá MaterialUI: https://mui.com/material-ui/getting-started/
 
 
 ## Design
