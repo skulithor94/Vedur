@@ -4,6 +4,8 @@ Vedur API
 ## Keyrsla
 
 ### Server
+Ná í nýjasta dotnet version, ég notaði: 9.0.102
+
 Fara í `VedurAPI/bin/Release/{operating system of choice}/`
 og tvísmella á VedurAPI, það ætti að keyra serverinn locally í terminal.
 Einnig er hægt að fara í VedurAPI möppuna og keyra: 
@@ -14,6 +16,8 @@ Til að keyra test er `dotnet test` skipunin keyrð.
 
 
 ### Web frontend
+Ná í nýjasta node version, ég notaði: 22.13.1
+
 Fara í VedurReact möppuna og keyra í terminal:
 
 `npm install`
