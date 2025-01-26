@@ -4,15 +4,22 @@ Vedur API
 ## Keyrsla
 
 ### Server
-
 Fara í `VedurAPI/bin/Release/{operating system of choice}/`
-og tvísmella á VedurAPI, það ætti að keyra serverinn locally í terminal
+og tvísmella á VedurAPI, það ætti að keyra serverinn locally í terminal.
+Einnig er hægt að fara í VedurAPI möppuna og keyra: 
+
+`dotnet run`
+
 Til að keyra test er `dotnet test` skipunin keyrð.
+
 
 ### Web frontend
 Fara í VedurReact möppuna og keyra í terminal:
-    `npm install`
-    `npm run dev`
+
+`npm install`
+
+`npm run dev`
+
 Fara á slóðina sem kemur í terminal, getur litið svona út: http://localhost:5174/
 
 
